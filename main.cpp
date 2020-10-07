@@ -78,6 +78,7 @@ int main(int argc, char *argv[]){
         }
     }
     eval
+    delete ntst;
 //    ntst->insert("c");
 //    ntst->insert("b");
 //    ntst->insert("c");

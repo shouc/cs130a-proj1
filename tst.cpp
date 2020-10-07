@@ -40,6 +40,7 @@ node* insert_helper(node* current_node, const std::string& key, int& v) {
         new_node->left = nullptr;
         new_node->middle = nullptr;
         new_node->right = nullptr;
+        new_node->is_all_set = false;
         v = 1;
         return new_node;
     }
@@ -116,7 +117,7 @@ int tst::decrease(std::string key) {
     return v;
 }
 
-std::vector<std::pair<std::string, int>> cnter;
+std::vector<std::pair<std::string, int> > cnter;
 
 
 void range_search_helper(node* current_node, std::string start, std::string end){
@@ -138,7 +139,7 @@ void range_search_helper(node* current_node, std::string start, std::string end)
     }
 }
 
-std::vector<std::pair<std::string, int>> tst::range_search(std::string start, std::string end) {
+std::vector<std::pair<std::string, int> > tst::range_search(std::string start, std::string end) {
     range_search_helper(this->root, start, end);
     return cnter;
 }

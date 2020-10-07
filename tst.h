@@ -26,7 +26,7 @@ public:
     int insert(std::string name);
     int search(std::string name);
     int decrease(std::string name);
-    std::vector<std::pair<std::string, int>> range_search(std::string, std::string);
+    std::vector<std::pair<std::string, int> > range_search(std::string, std::string);
     ~tst();
 };
 
