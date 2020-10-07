@@ -28,15 +28,15 @@
     }
 int main(int argc, char *argv[]){
     auto ntst = new tst();
-//    ntst->insert("hello");
-//    ntst->insert("hello");
-//    ntst->insert("yesterday");
-//    ntst->insert("yesterday");
-//    ntst->insert("yesterday");
-//    ntst->insert("band");
-//    ntst->insert("bankers");
-//    ntst->insert("bat");
-//    ntst->insert("cab");
+    ntst->insert("hello");
+    ntst->insert("hello");
+    ntst->insert("yesterday");
+    ntst->insert("yesterday");
+    ntst->insert("yesterday");
+    ntst->insert("band");
+    ntst->insert("bankers");
+    ntst->insert("bat");
+    ntst->insert("cab");
     std::string action = "";
     bool action_set = false;
     std::string input1 = "";

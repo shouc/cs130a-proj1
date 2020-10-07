@@ -144,5 +144,21 @@ std::vector<std::pair<std::string, int>> tst::range_search(std::string start, st
 }
 
 
+void del_helper(node* current_node){
+    if (current_node == nullptr) return;
+    del_helper(current_node->left);
+    del_helper(current_node->right);
+    del_helper(current_node->middle);
+    delete current_node;
+}
+tst::~tst() {
+    del_helper(root);
+}
+
+tst::tst() {
+    root = nullptr;
+}
+
+
 
 
