@@ -12,6 +12,7 @@ public:
     node* left;
     node* middle;
     node* right;
+    node* parent;
     int l_count;
     std::string l_name;
     int r_count;
