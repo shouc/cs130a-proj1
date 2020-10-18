@@ -291,6 +291,7 @@ int dec_helper(node* parent, int l, node* current_node, std::string key){
         return v;
     }
     if (key > current_node->r_name) return dec_helper(current_node, 3, current_node->right, key);
+    assert(false);
 }
 
 
@@ -302,7 +303,6 @@ int tst::decrease(std::string key){
             return 0;
         }
     }
-    int i;
     return dec_helper(nullptr, 0, this->root, key);
 }
 
