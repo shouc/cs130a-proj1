@@ -18,7 +18,8 @@
         int t = ntst->decrease(input1);\
         if (t > 0)\
             printf("%s deleted, new count = %d\n", input1.c_str(), t);\
-        else printf("%s deleted\n", input1.c_str());\
+        else if (t == 0)\
+            printf("%s deleted\n", input1.c_str());\
     }\
     if (action == "rangesearch"){\
         auto t = ntst->range_search(input1, input2);\

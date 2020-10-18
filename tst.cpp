@@ -235,7 +235,7 @@ bool delete_helper(node* current_node, bool is_left){
 
 int dec_helper(node* parent, int l, node* current_node, std::string key){
     if (current_node == nullptr) {
-        return 0;
+        return -1;
     }
     if (key < current_node->l_name) return dec_helper(current_node, 1, current_node->left, key);
     if (key == current_node->l_name) {
@@ -263,7 +263,7 @@ int dec_helper(node* parent, int l, node* current_node, std::string key){
         return v;
     }
     if (current_node->r_name.empty()) {
-        return 0;
+        return -1;
     }
     if (key > current_node->l_name && key < current_node->r_name)
         return dec_helper(current_node, 2, current_node->middle, key);
