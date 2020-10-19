@@ -243,7 +243,6 @@ int dec_helper(node* parent, int l, node* current_node, std::string key){
         if (v == 0) {
 
             if (delete_helper(current_node, true)){
-                assert(l != 0);
                 switch (l){
                     case 1:
                         delete parent->left;
@@ -271,7 +270,6 @@ int dec_helper(node* parent, int l, node* current_node, std::string key){
         int v = --current_node->r_count;
         if (v == 0) {
             if (delete_helper(current_node, false)){
-                assert(l != 0);
                 switch (l){
                     case 1:
                         delete parent->left;
@@ -291,7 +289,7 @@ int dec_helper(node* parent, int l, node* current_node, std::string key){
         return v;
     }
     if (key > current_node->r_name) return dec_helper(current_node, 3, current_node->right, key);
-    assert(false);
+    return -1;
 }
 
 
