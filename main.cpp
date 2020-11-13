@@ -21,7 +21,7 @@
         else if (t == 0)\
             printf("%s deleted\n", input1.c_str());\
     }\
-    if (action == "rangesearch"){\
+    if (action == "range_search"){\
         auto t = ntst->range_search(input1, input2);\
         for (int i = 0; i < t.size(); ++i) {\
             printf("%s\n", t[i].first.c_str());\
@@ -53,7 +53,7 @@ int main(int argc, char *argv[]){
                     last_comma = false;
                     break;
                 }
-                if (action == "range") break;
+                if (action == "rangesearch") break;
                 if (action_set) {
                     if (input1_set && input2 == "to")
                         input2 = "";

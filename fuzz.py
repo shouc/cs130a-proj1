@@ -61,7 +61,7 @@ while current_loc < 100000:
             v1 = random.choice(v)
             v2 = random.choice(v)
             expected_result += range_search(tree, v1, v2)
-            stack += "rangesearch %s to %s, " % (v1, v2)
+            stack += "range_search %s to %s, " % (v1, v2)
     stack = stack[:-2]
     try:
         result = subprocess.check_output(['./project1.out', stack])
